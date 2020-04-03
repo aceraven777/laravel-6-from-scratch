@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('test', function () {
-    return view('test');
+Route::get('/', function () {
+    $name = request('name');
+
+    return view('test', compact('name'));
 });
